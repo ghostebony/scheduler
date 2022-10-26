@@ -36,9 +36,6 @@ export default abstract class Scheduler {
 		if (!validate(cronExpression)) {
 			throw new Error(`Task ${id} has an invalid cron expression: ${cronExpression}`);
 		}
-		// else {
-		// 	console.log(`Task scheduled: ${id}\t${cronExpression}`);
-		// }
 
 		return schedule(cronExpression, task, {
 			name: id,
@@ -51,35 +48,5 @@ export default abstract class Scheduler {
 
 	public static getTask = (id: string) => this.getTasks().get(id);
 }
-
-// export const scheduler = Scheduler.setTasks({
-// 	tasks: [
-// 		{
-// 			id: "database:backup",
-// 			task: database.backup,
-// 			cron: config.schedule.database.backup.cronExpression.get(),
-// 		},
-// 		{
-// 			id: "imdb:datasets:title:basics",
-// 			task: imdb.datasets.titleBasics,
-// 			cron: config.schedule.imdb.dataset.cronExpression.get("title.basics"),
-// 		},
-// 		{
-// 			id: "imdb:datasets:title:episode",
-// 			task: imdb.datasets.titleEpisode,
-// 			cron: config.schedule.imdb.dataset.cronExpression.get("title.episode"),
-// 		},
-// 		{
-// 			id: "imdb:datasets:title:ratings",
-// 			task: imdb.datasets.titleRatings,
-// 			cron: config.schedule.imdb.dataset.cronExpression.get("title.ratings"),
-// 		},
-// 		// {
-// 		// 	id: "tmdb:exports",
-// 		// 	task: tmdb.exports,
-// 		// 	cron: config.schedule.tmdb.export.cronExpression.get(),
-// 		// },
-// 	],
-// });
 
 // console.log(scheduler.getTasks());
