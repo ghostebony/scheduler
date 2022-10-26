@@ -48,5 +48,3 @@ export default abstract class Scheduler {
 
 	public static getTask = (id: string) => this.getTasks().get(id);
 }
-
-// console.log(scheduler.getTasks());
