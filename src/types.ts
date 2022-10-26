@@ -11,13 +11,13 @@ export interface Cron {
 
 export type Task = (now: Date) => void;
 
-export type Options = ScheduleOptions;
+export type Options = Omit<ScheduleOptions, "name">;
 
 export interface setTask {
 	id: string;
 	cron: Cron;
 	task: Task;
-	options?: ScheduleOptions;
+	options?: Options;
 }
 
 export type setTasks = setTask[];
