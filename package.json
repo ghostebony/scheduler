@@ -1,13 +1,20 @@
 {
-	"name": "typescript-package-template",
+	"name": "@ghostebony/scheduler",
 	"version": "0.0.1",
 	"main": "index.js",
 	"type": "module",
 	"author": "Pedro Américo",
 	"license": "MIT",
-	"repository": "github:ghostebony/typescript-package-template",
-	"description": "typescript package template",
-	"keywords": [],
+	"repository": "github:ghostebony/scheduler",
+	"description": "Node.js job scheduler built on top of node-cron",
+	"keywords": [
+		"node-cron",
+		"cron",
+		"scheduler",
+		"schedule",
+		"task",
+		"job"
+	],
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"build": "tsc --build",
