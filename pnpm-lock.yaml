@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.11.6
   '@types/node-cron': ^3.0.4
   node-cron: ^3.0.2
   prettier: 2.7.1
   typescript: 4.8.4
 
 dependencies:
+  '@types/node': 18.11.6
   node-cron: 3.0.2
 
 devDependencies:
@@ -19,6 +21,10 @@ packages:
   /@types/node-cron/3.0.4:
     resolution: {integrity: sha512-A2H+uz5ry4hohYjRe5mQSE/8Dx/HGw4WZ728JxhKUZ7z8CMvRuG2tpbzGHRGQCuQzz5aCNB1iXzPZYHd4BPHvw==}
     dev: true
+
+  /@types/node/18.11.6:
+    resolution: {integrity: sha512-j3CEDa2vd96K0AXF8Wur7UucACvnjkk8hYyQAHhUNciabZLDl9nfAEVUSwmh245OOZV15bRA3Y590Gi5jUcDJg==}
+    dev: false
 
   /node-cron/3.0.2:
     resolution: {integrity: sha512-iP8l0yGlNpE0e6q1o185yOApANRe47UPbLf4YxfbiNHt/RU5eBcGB/e0oudruheSf+LQeDMezqC5BVAb5wwRcQ==}

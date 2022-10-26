@@ -27,6 +27,7 @@
 		"pnpm": "^7.0.0"
 	},
 	"dependencies": {
+		"@types/node": "^18.11.6",
 		"node-cron": "^3.0.2"
 	},
 	"devDependencies": {
