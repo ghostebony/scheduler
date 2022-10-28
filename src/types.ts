@@ -11,7 +11,7 @@ export interface Cron {
 
 export type Task = (now: Date | "manual") => void;
 
-export type Options = Omit<ScheduleOptions, "name">;
+export type Options = Omit<ScheduleOptions, "name"> & { immediate?: boolean };
 
 export interface setTask {
 	id: string;

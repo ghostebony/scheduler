@@ -41,11 +41,18 @@ export default abstract class Scheduler {
 			throw new Error(`Task ${id} has an invalid cron expression: ${cronExpression}`);
 		}
 
-		return schedule(cronExpression, task, {
+		const { immediate, ...restOptions } = { ...this.options, ...options };
+
+		const scheduleTask = schedule(cronExpression, task, {
 			name: id,
-			...this.options,
-			...options,
+			...restOptions,
 		});
+
+		if (immediate) {
+			scheduleTask.now();
+		}
+
+		return scheduleTask;
 	}
 
 	public static getTasks = () => getTasks();
