@@ -9,7 +9,7 @@ export interface Cron {
 	dayOfWeek?: string | number;
 }
 
-export type Task = (now: Date) => void;
+export type Task = (now: Date | "manual") => void;
 
 export type Options = Omit<ScheduleOptions, "name">;
 
