@@ -8,11 +8,11 @@ specifiers:
   typescript: 4.8.4
 
 dependencies:
+  '@types/node-cron': 3.0.4
   node-cron: 3.0.2
 
 devDependencies:
   '@types/node': 18.11.7
-  '@types/node-cron': 3.0.4
   prettier: 2.7.1
   typescript: 4.8.4
 
@@ -20,7 +20,7 @@ packages:
 
   /@types/node-cron/3.0.4:
     resolution: {integrity: sha512-A2H+uz5ry4hohYjRe5mQSE/8Dx/HGw4WZ728JxhKUZ7z8CMvRuG2tpbzGHRGQCuQzz5aCNB1iXzPZYHd4BPHvw==}
-    dev: true
+    dev: false
 
   /@types/node/18.11.7:
     resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
