@@ -19,5 +19,3 @@ export interface setTask {
 	task: Task;
 	options?: Options;
 }
-
-export type setTasks = setTask[];
