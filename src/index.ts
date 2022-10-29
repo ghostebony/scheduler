@@ -1,4 +1,4 @@
-import { getTasks, schedule, validate, type ScheduledTask } from "node-cron";
+import { getTasks, schedule, validate } from "node-cron";
 import type * as Types from "./types";
 
 export default abstract class Scheduler {
@@ -8,15 +8,8 @@ export default abstract class Scheduler {
 		this.options = options;
 	}
 
-	public static setTasks(tasks: Types.setTask[]) {
-		const scheduleTasks = new Map<string, ScheduledTask>();
-
-		for (const task of tasks) {
-			scheduleTasks.set(task.id, this.setTask(task));
-		}
-
-		return scheduleTasks;
-	}
+	public static setTasks = (tasks: Types.setTask[]) =>
+		new Map(tasks.map((task) => [task.id, this.setTask(task)]));
 
 	public static setTask({
 		id,
